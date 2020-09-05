@@ -46,17 +46,13 @@ a {
 
 /* Logo */
 .logo {
-  color: var(--accent-color);
-  font-family: Raleway, sans-serif;
+    color: var(--accent-color);
+
+    font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-}
-.logo .dark {
-  margin-bottom: 20px;
-
-  color: var(--white-color);
 }
 
 .logo .light {
@@ -541,6 +537,16 @@ footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+.page-footer .logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.logo .dark {
+  color: var(--white-color);
+}
+
 .address {
   color: var(--white-color);
   font-style: normal;

@@ -106,6 +106,8 @@ position: relative;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list > .item.current {
@@ -131,6 +133,9 @@ border-radius: 2px;
 .site-contact .icon {
   fill: currentColor;
   margin-right: 10px;
+
+  animation: site-contact-fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
 
 /* .site-contact .item:nth-child(1)::before {
@@ -173,9 +178,22 @@ display: flex;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-contact .link:hover .icon {
+@keyframes site-contact-fill{
+  0% {
+    fill: var(--primary-text-color);
+  }
+100% {
+  fill: var(--accent-color);
+}
+}
+
+ .site-contact .link:hover .icon,
+ .site-contact .link:focus .icon{
   fill: var(--accent-color);
 }
 
@@ -415,27 +433,40 @@ background-position: center;
 }
 
 .social-link {
-  
-  display: flex;
+    display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: var(--white-color);
 
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link .icon {
   fill: #AFB1B8;  
+
+  transition: 250ms;
+  animation: team-link-fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link:hover{
+.social-link:hover,
+.social-link:focus{
 background-color: var(--accent-color);
 }
 
-.social-link:hover .icon{
+.social-link:hover .icon,
+.social-link:focus .icon{
 fill: var(--white-color);
+}
+
+@keyframes {
+  0% {
+    fill: #AFB1B8}
+  100% {
+    fill: var(--white-color)}
 }
 
 .social-item:not(:last-child) {
@@ -449,28 +480,43 @@ fill: var(--white-color);
 }
 
 .regular-customers-link {
-      display: inline-flex;
-    justify-content: center;
-    align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 90px;
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.regular-customers-link:hover {
+.regular-customers-link:hover,
+.regular-customers-link:focus {
   border: 1px solid var(--accent-color)
 }
 
 .regular-customers-link .icon {
 fill: #AFB1B8;
+
+transition: 250ms;
+animation: change-client-fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.regular-customers-link:hover .icon {
+.regular-customers-link:hover .icon,
+.regular-customers-link:focus .icon {
 fill: var(--accent-color);
 }
 
+@keyframes change-client-fill {
+  0%{
+    fill: #AFB1B8;
+  }
+  100%{
+    fill: var(--accent-color);
+  }
+}
 
 .filter {
   display: flex;
@@ -480,6 +526,12 @@ fill: var(--accent-color);
 
 .filter .item:not(:last-child) {
   margin-right: 8px;
+}
+
+.filter .item {
+  box-shadow: none;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter .item:hover {
@@ -516,6 +568,9 @@ fill: var(--accent-color);
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter .button:hover,
@@ -535,6 +590,12 @@ fill: var(--accent-color);
 
 .works .item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+}
+
+.works .item {
+  box-shadow: none;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .works .item:hover {
@@ -666,6 +727,8 @@ footer {
 
 .join .social-item .social-link {
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join .social-item .icon {
@@ -674,6 +737,7 @@ footer {
 
 
 
-.join .social-item .social-link:hover {
+.join .social-item .social-link:hover,
+.join .social-item .social-link:focus {
   background-color: var(--accent-color);
 }

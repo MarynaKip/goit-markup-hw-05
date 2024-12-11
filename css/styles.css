@@ -699,13 +699,10 @@ address {
 
 }
 
-.user-privacy:checked {
-    background-color: var(--blue);
-}
-
 .user-privacy:checked .checkbox-icon-container {
     border: none;
-    fill: var(--violete)
+    fill: var(--violete);
+    background-color: var(--blue);
 }
 
 .privacy-policy {

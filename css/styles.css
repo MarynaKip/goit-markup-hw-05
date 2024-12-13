@@ -699,7 +699,7 @@ address {
 
 }
 
-.user-privacy:checked .checkbox-icon-container {
+.user-privacy-input:checked + .user-privacy-label .checkbox-icon-container {
     border: none;
     fill: var(--violete);
     background-color: var(--blue);
